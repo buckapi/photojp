@@ -1,0 +1,68 @@
+<header class="stick style2 w-100">
+    <div class="topbar bg-color5 w-100">
+        <div class="container">
+            <div class="topbar-inner d-flex flex-wrap justify-content-between align-items-center w-100">
+                <ul class="topbar-info-list mb-0 list-unstyled d-inline-flex">
+                    <li><i class="thm-clr fas fa-map-marker-alt"></i>Dirección: 8 a calle # 215 Col Miguel Alemán San Nicolas de los Garza, Nuevo León, México C.P.66470</li>
+                    <li><i class="thm-clr far fa-envelope-open"></i>Email: <a href="mailto:info@acerosymas.com.mx" title="Escribenos">info@acerosymas.com.mx</a></li>
+                </ul>
+              <!--  <ul class="topbar-links mb-0 list-unstyled d-inline-flex">                                <li><a href="javascript:void(0);" title="">Login</a></li>
+                </ul> -->
+            </div>
+        </div>
+    </div><!-- Topbar -->
+    <div class="logo-info-bar-wrap w-100">
+        <div class="container">
+            <div class="logo-info-bar-inner w-100 d-flex flex-wrap justify-content-between align-items-center">
+                <div class="logo-social d-inline-flex flex-wrap justify-content-between align-items-center">
+                    <div class="logo"><h1 class="mb-0"><a (click)="setRoute('first')" title="Home"><img class="img-fluid" src="assets/aceros/images/logo2.png" alt="Logo" srcset="assets/aceros/images/retina-logo2.png"></a></h1></div><!-- Logo -->
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/aceroymas.com.mx?_rdc=1&_rdr" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/acerosymas1/" title="Instragram" target="_blank"><i class="fab fa-instagram"></i></a>
+                       
+                    </div>
+                </div>
+                <div class="top-info-wrap d-inline-flex flex-wrap justify-content-between align-items-center" [hidden]="yeoman.virtualRoute==='shop'">
+                    <div class="call-us" [hidden]="yeoman.virtualRoute==='shop'">
+                        <i class="thm-clr flaticon-phone-call"></i>
+                        <span>24/7 Atención al cliente</span>
+                        <strong> <a href="tel:8267690870"> 8267690870 </a> </strong>
+                    </div>
+                    <div class="add-cart">
+                        <a href="#" title="">
+                            <i class="thm-bg fas fa-shopping-basket"></i>
+                            Carro
+                            <span class="d-block" id="cart-quantity">0</span>
+                        </a>
+                    </div>
+                </div>                            
+            </div>
+        </div>
+    </div><!-- Logo Info Bar Wrap -->
+    <div class="menu-wrap">
+        <div class="container">
+            <nav class="d-inline-flex justify-content-between align-items-center w-100">
+                <div class="header-left">
+                    <ul class="mb-0 list-unstyled d-inline-flex">
+                       
+                        <li><a (click)="setRoute('first')" style="cursor: pointer;" title="">Inicio</a></li>
+                        <li><a (click)="setRoute('about')" style="cursor: pointer;" title="">Nosotros</a></li>
+                        <li><a (click)="setRoute('shop')" style="cursor: pointer;"itle="">Tienda
+                            </a>
+                        </li>
+                        <li><a (click)="setRoute('contact')" style="cursor: pointer;" title="">Contacto</a></li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="header-right-btns" [hidden]="yeoman.virtualRoute==='shop'">
+                    <!-- <a class="get-quote" href="https://wa.me/+5218117788170?text=Hola!!%20Quiero%20comprar%20en%20Acero%20y%20más" title=""><i class="fab fa-whatsapp" style="    font-size: 30px;"></i>Atención personalizada<i class="flaticon-arrow-pointing-to-right"></i></a> -->
+                    <a class="get-quote" href="https://wa.me/+5218117788170?text=Hola!!%20Quiero%20comprar%20en%20Acero%20y%20más" title="">Atención personalizada<i class="fab fa-whatsapp" style="font-size:20px;"></i></a> 
+
+                </div>
+                
+            </nav>
+            
+        </div>
+    </div><!-- Menu Wrap -->
+</header><!-- Header -->

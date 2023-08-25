@@ -1,0 +1,102 @@
+
+<!-- <app-categories></app-categories> -->
+
+<section style="margin-top: 100px;">
+    
+    <div class="w-100 pt-100 pb-100 position-relative">
+        <div class="container">
+            <div class="shop-filters-pagination-wrap d-flex flex-wrap justify-content-between w-100">
+                <!-- <div class="filter-inner">
+                    <span>View as:</span>
+                    <a href="javascript:void(0);" title=""><i class="fas fa-th-large"></i></a>
+                    <a href="javascript:void(0);" title=""><i class="fas fa-th-list"></i></a>
+                </div> -->
+                <div class="filter-inner">
+                    <span>Categoría:</span>
+                    <div >
+                        <!-- <select>
+                            <option *ngFor="let category of categories;let i as index" (click)="setCategory(i)">{{category.name}}</option>
+                           
+                        </select> -->
+                        <select  class="form-control wide my-custom-select"[(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let category of categories;let i = index" [ngValue]="category"> <span   style="cursor:pointer;">{{category.name}}</span></option>
+                        </select>
+                        <!-- <select class="form-control wide my-custom-select" [(ngModel)]="category" (ngModelChange)="setCategory(category)" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let category of yeoman.allcategory; let i = index" [ngValue]="category.idCategory">
+                                <span style="cursor:pointer;">{{ category.name }}</span>
+                            </option>
+                        </select> -->
+                        
+                        
+                    </div>
+                  
+                </div>
+                <!-- <div class="filter-inner">
+                    <span>Show:</span>
+                    <div class="slc-wrp">
+                        <select>
+                            <option>11</option>
+                            <option>22</option>
+                            <option>33</option>
+                        </select>
+                    </div>
+                </div> -->
+            </div>
+         
+            <div class="shop-wrap w-100">
+                <div class="row">
+                    <div class="col-6 col-lg-3" *ngFor="let product of yeoman.products, let i = index "  style="cursor: pointer;"(click)="view(i)" [hidden]="yeoman.categorySelected!=product.idBranch && yeoman.categorySelected!='first'">
+                        <div class="shop-box w-100">
+                            <div class="shop-img w-100 position-relative overflow-hidden">
+                                <img class="img-fluid w-100 shadow-style fixed-size" src="{{product.images[0]}}" alt="Shop Image 1">
+                                <a (click)="setRoute('detail')" title="" style="color: white;">Comprar<i class="fas fa-shopping-basket"></i></a>
+                              </div>
+                            <div class="shop-info w-100">
+                                <h3 class="mb-0"><a (click)="setRoute('detail')" title="">{{product.name}}</a></h3>
+                                <div class="shop-info-bottom d-flex flex-wrap justify-content-between w-100">
+                                    <!-- <span class="rate"><i class="far fa-star on"></i><i class="far fa-star on"></i><i class="far fa-star off"></i><i class="far fa-star off"></i><i class="far fa-star off"></i></span> -->
+                                    <span class="price"><ins>${{product.price}}</ins><del>$569.00</del></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div><!-- Shop Wrap -->
+            <div class="shop-filters-pagination-wrap mt-50 d-flex flex-wrap justify-content-between w-100">
+                <div class="pagination-wrap">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" title=""><i class="fas fa-angle-left"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" title="">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="javascript:void(0);" title="">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" title="">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);" title=""><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div> <!-- Shop Filters Pagination Wrap -->
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="w-100 position-relative">
+        <div class="container">
+            <div class="getin-touch-wrap overlap-99 brd-rd5 style2 thm-layer opc8 w-100 overflow-hidden position-relative">
+                <div class="fixed-bg" style="background-image: url(assets/aceros/images/parallax2.jpg);"></div>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-7 col-sm-12 col-lg-5">
+                        <div class="getin-touch-title w-100">
+                            <span class="text-color1 d-block">¿Tienes un Proyecto?</span>
+                            <h2 class="mb-0"> Comunicate con Nosotros</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12 col-lg-4">
+                        <div class="getin-touch-btn text-right">
+                            <a class="thm-btn bg-color1" (click)="setRoute('contact')" style="cursor: pointer; color: antiquewhite;">Escribenos<i class="flaticon-arrow-pointing-to-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
